@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Keith's Mileage Log</title>
+    <link rel="stylesheet" href="css/finalproject.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/finalproject.js"></script>
+  </head>
+  <body>
+    <form autocomplete="off" action = "" id = "trainingLog" name = "theLog">
+      <fieldset name="Training Log">
+        <legend>Training Log Form</legend>
+        <div id="selects">
+          <div id="selectActivity" style="float:left;margin-right:15px;"> Select
+            The Type of Activity<br>
+            <select name="activity" id="activity">
+              <option>----</option>
+            </select>
+          </div>
+          <br><br><br>
+
+          <label for="Date">Date (dd/mm/yyyy): </label><input type="text" placeholder = "dd/mm/yyyy" required = "required" size ="20" id="date"><br><br>
+
+          <label for="Time">Time(h:mm:ss): </label><input type="text" placeholder = "h:mm:ss" required = "required" size ="20" id="time"><br><br>
+          <label for="Distance">Distance(miles): </label><input type="text" placeholder = "miles" class = "hidden" size ="40" id="distance"><br><br>
+          <button onclick="saveMileage()" type = "button">Save Mileage</button><br>
+
+          Description:<br>
+          <textarea wrap="soft" rows="15" cols="40" placeholder = "Brief Description of the workout" name="description" id="description"></textarea>
+          <div id="charLimit">Limit: 750 characters. You have <span id="charsLeft">750</span>
+            left.</div>
+
+          <button type="submit" id="submitBtn" name="submit">Submit</button><br>
+
+      </fieldset>
+    </form>
+
+    <h2>My Mileage</h2>
+    <div id="output">
+    <div class="info infoHead"><div>Distance</div></div>
+    </div>
+
+  </body>
+</html>
